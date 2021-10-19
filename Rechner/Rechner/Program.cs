@@ -4,10 +4,6 @@ namespace Rechner
 {
     class Program
     {
-        /// <summary>
-        /// So wird einen Summary erstellt
-        /// </summary>
-        /// <param name="args"></param>
         static void Main(string[] args)
         {
             /*
