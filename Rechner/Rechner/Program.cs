@@ -34,7 +34,7 @@ namespace Rechner
 
             // Ausgabe der Summe in der Console
             Console.WriteLine("Die Berechnung lautet: {0}", result);
-            Console.ReadLine();
+            WarteAufBenutzerEingabe();
         }
 
         /// <summary>
@@ -62,6 +62,12 @@ namespace Rechner
                 default:
                     return 0;
             }
+        }
+
+        static void WarteAufBenutzerEingabe()
+        {
+            Console.WriteLine("Drucken Sie eine beliebige Taste um das Programm zu beenden.");
+            Console.ReadLine();
         }
     }
 }
