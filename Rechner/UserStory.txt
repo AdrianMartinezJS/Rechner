@@ -1,17 +1,55 @@
 	User Stories für Taschenrechner
 
+	Titel: Softwarestruktur
+	Story: Als Entwickler möchte ich den Quellcode sauber strulturieren, um später einfach Funktionalitäten hinzufügen zu können
+	Akzeptanzkriterien:
+		* Das Single Level of Abstraction Prinzip wird eingehalten, oder eine Abweichung ist begründet und dokumentiert
+	Status:
+		* Offen
+
 	Titel: Addieren
 	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen
 	Akzeptanzkriterien:
-		- Zahlen zwischen 0 un 10 können addiert werden
-	Status: (In nachinein als Dokumentation)
+		* Zahlen zwischen 0 un 10 können addiert werden
+	Status:
+		* Implementiert
+		* getestet
+		* erledigt
+	
+	Titel: Subtrahieren
+	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren differenz berechnen zu lassen
+	Akzeptanzkriterien:
+		- Zahlen zwischen -10 un 100 können addiert werden
+	Status:
 		- Implementiert
 		- getestet
-		- erledigt
-	
+		- erledigt ?
+
+	Titel: Nultiplizieren
+	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Multiplikation berechnen zu lassen
+	Akzeptanzkriterien:
+		- Zahlen zwischen 0 un 100 können multipliziert werden
+	Status:
+		- Implementiert
+		- getestet
+		- erledigt ?
+
+	Titel: Dividieren
+	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Division berechnen zu lassen
+	Akzeptanzkriterien:
+		- Zahlen zwischen 0 un 100 können dividiert werden
+	Status:
+		- Implementiert
+		- getestet
+		- erledigt ?
+
+
 	Titel: Starten
 	Story: Als Benutzer möchte ich den Taschenrechner aufrufen können, um mein Resultat schnell zu bekommen
 	Akzeptanzkriterien:
 		- Die Anwendeung wird innerhalb von 2 Sekunden auf einen rechner gestartet
 		- Die Anwendung läuft auf einem Rechner mit Windows 10
-	
+	Status: 
+		- Implementiert
+		- getestet
+		- erledigt
