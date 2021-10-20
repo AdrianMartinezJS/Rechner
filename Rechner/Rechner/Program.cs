@@ -6,24 +6,14 @@ namespace Rechner
     {
         static void Main(string[] args)
         {
-            /*
-             * Title: Taschenrechner
-             * Story: Als Benutzer möchte ich zwei Zahlen Mit möglicherweise Nachkommazahlen eingeben, um deren Summe berechnen zu lassen
-             * Akzeptanzkriterien: Zahlen zwischen 0 und 10 rechnen können
-             **/
 
             // Definition Variablen
-            string ersterZahl, zweiterZahl, Operator;
             double ersterSummando, zweiterSummando, result;
 
-            Console.WriteLine("Geben Sie der erster Zahl ein: ");
-            ersterZahl = Console.ReadLine();
-
-            Console.WriteLine("Geben Sie der zweiter Zahl ein: ");
-            zweiterZahl = Console.ReadLine();
-
-            Console.WriteLine("Was möchten Sie mit dieser Zahlen machen? / Addieren (+), Abziehen (-), Multiplizieren (*) oder dividieren (/) /:");
-            Operator = Console.ReadLine();
+            // Hol Zahlen vom User
+            string ersterZahl = HolZahl("Geben Sie der erster Zahl ein: ");
+            string zweiterZahl = HolZahl("Geben Sie der zweiter Zahl ein: ");
+            string Operator = HolZahl("Was möchten Sie mit dieser Zahlen machen? Addieren (+), Subtrahieren (-), Multiplizieren (*) oder dividieren (/): ");
 
             // Wandel Text in Zahlen
             ersterSummando = Convert.ToDouble(ersterZahl);
@@ -64,10 +54,27 @@ namespace Rechner
             }
         }
 
+        /// <summary>
+        /// Sagt den User was er tun muss um den Programm zu beenden
+        /// Beendet das Program
+        /// </summary>
         static void WarteAufBenutzerEingabe()
         {
             Console.WriteLine("Drucken Sie eine beliebige Taste um das Programm zu beenden.");
             Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Hol sich die Zahlen vom User
+        /// </summary>
+        /// <param name="ausgabeText">Was wird in der Console für den User geschrieben</param>
+        /// <returns></returns>
+        static string HolZahl( string ausgabeText)
+        {
+            Console.WriteLine(ausgabeText);
+            string zahl = Console.ReadLine();
+
+            return zahl;
         }
     }
 }
