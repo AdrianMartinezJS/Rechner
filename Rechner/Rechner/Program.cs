@@ -143,7 +143,7 @@ namespace Rechner
         /// </summary>
         /// <param name="ausgabeText">Was wird in der Console für den User geschrieben</param>
         /// <returns></returns>
-        static string HolBenutzerEingabe( string ausgabeText, double resultat = 0)
+        static string HolBenutzerEingabe( string ausgabeText)
         {
             Console.WriteLine(ausgabeText);
             string zahl = Console.ReadLine();
