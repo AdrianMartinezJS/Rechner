@@ -5,7 +5,8 @@
 	Akzeptanzkriterien:
 		* Das Single Level of Abstraction Prinzip wird eingehalten, oder eine Abweichung ist begründet und dokumentiert
 	Status:
-		* Offen
+		* Umgesetzt
+		* Erledigt
 
 	Titel: Addieren
 	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Summe berechnen zu lassen
@@ -23,7 +24,7 @@
 	Status:
 		- Implementiert
 		- getestet
-		- erledigt ?
+		- erledigt
 
 	Titel: Nultiplizieren
 	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Multiplikation berechnen zu lassen
@@ -32,7 +33,7 @@
 	Status:
 		- Implementiert
 		- getestet
-		- erledigt ?
+		- erledigt
 
 	Titel: Dividieren
 	Story: Als Benutzer möchte ich zwei Zahlen eingeben, um deren Division berechnen zu lassen
@@ -41,7 +42,7 @@
 	Status:
 		- Implementiert
 		- getestet
-		- erledigt ?
+		- erledigt
 
 
 	Titel: Starten
