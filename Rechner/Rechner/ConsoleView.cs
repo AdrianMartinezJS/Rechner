@@ -46,7 +46,7 @@ namespace Rechner
         /// <summary>
         /// Holt die Eingabe (Zahl) vom Benutzer
         /// </summary>
-        /// <returns></returns>
+        /// <returns>double</returns>
         public double HoleZahlVomBenutzer()
         {
             string zahl;
@@ -59,7 +59,7 @@ namespace Rechner
         /// <summary>
         /// Holt die Eingabe (Operator) vom Benutzer
         /// </summary>
-        /// <returns></returns>
+        /// <returns>string</returns>
         public string HoleOperatorVomBenutzer()
         {
             Console.WriteLine("Bitte gib die auszuführende Operation ein( +, -, /, * )");

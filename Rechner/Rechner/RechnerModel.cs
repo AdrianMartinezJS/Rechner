@@ -51,7 +51,7 @@ namespace Rechner
         /// </summary>
         /// <param name="Nummer">Erster Zahl vom User</param>
         /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         private double Subtrahiere(double Nummer, double Nummer2)
         {
             double sub = Nummer - Nummer2;
@@ -64,7 +64,7 @@ namespace Rechner
         /// </summary>
         /// <param name="Nummer">Erster Zahl vom User</param>
         /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         private double Addiere(double Nummer, double Nummer2)
         {
             double add = Nummer + Nummer2;
@@ -77,7 +77,7 @@ namespace Rechner
         /// </summary>
         /// <param name="Nummer">Erster Zahl vom User</param>
         /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         private double Multipliziere(double Nummer, double Nummer2)
         {
             double mult = Nummer * Nummer2;
@@ -90,7 +90,7 @@ namespace Rechner
         /// </summary>
         /// <param name="Nummer">Erster Zahl vom User</param>
         /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
+        /// <returns>double</returns>
         private double Dividiere(double Nummer, double Nummer2)
         {
             double div = Nummer / Nummer2;
