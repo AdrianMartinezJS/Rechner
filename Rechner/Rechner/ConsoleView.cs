@@ -17,9 +17,9 @@ namespace Rechner
         /// Gib das Resultat in der Console aus Anhand der Operator und das Resultat
         /// </summary>
         /// <param name="operation">Das Operator was dem User eingegeben hat</param>
-        public void GibResultatAus(string operation)
+        public void GibResultatAus()
         {
-            switch (operation)
+            switch (model.Operation)
             {
                 case "+":
                     Console.WriteLine("Die Summe ist: {0}", model.Resultat);
@@ -47,10 +47,13 @@ namespace Rechner
         /// Holt die Eingabe (Zahl) vom Benutzer
         /// </summary>
         /// <returns></returns>
-        public string HoleZahlVomBenutzer()
+        public double HoleZahlVomBenutzer()
         {
+            string zahl;
             Console.WriteLine("Bitte gib eine Zahl für die Berechnung ein: ");
-            return Console.ReadLine();
+            zahl = Console.ReadLine();
+
+            return Convert.ToDouble(zahl);
         }
 
         /// <summary>

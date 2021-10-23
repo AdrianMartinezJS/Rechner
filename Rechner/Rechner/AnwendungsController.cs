@@ -16,20 +16,15 @@ namespace Rechner
         public void Ausführen()
         {
             // Hol Zahlen vom User
-            string ersterZahlAlsString = view.HoleZahlVomBenutzer();
+            double ersteZahl = view.HoleZahlVomBenutzer();
             string operation = view.HoleOperatorVomBenutzer();
-            string zweiterZahlAlsString = view.HoleZahlVomBenutzer();
-
-            // Wandel Text in Zahlen
-            // TODO: Auslagern in Methode, wenn Struktur umfangreicher geworden ist
-            double ersterZahlAlsInt = Convert.ToDouble(ersterZahlAlsString);
-            double zweiterZahlAlsInt = Convert.ToDouble(zweiterZahlAlsString);
+            double zweiteZahl = view.HoleZahlVomBenutzer();
 
             // Berechnung ausführen
-            model.Berechne(ersterZahlAlsInt, zweiterZahlAlsInt, operation);
+            model.Berechne(ersteZahl, zweiteZahl, operation);
 
-            // Ausgabe der Summe in der Console
-            view.GibResultatAus(operation);
+            // Ausgabe
+            view.GibResultatAus();
             view.WarteAufEndeDurchBenutzer();
 
         }

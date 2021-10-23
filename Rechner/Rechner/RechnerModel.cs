@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rechner
 {
     class RechnerModel
     {
         public double Resultat { get; private set; }
+        public string Operation { get; private set; }
 
         /// <summary>
         /// Constructor
@@ -16,6 +13,7 @@ namespace Rechner
         public RechnerModel()
         {
             Resultat = 0;
+            Operation = "unbekannt";
         }
 
         /// <summary>
@@ -26,6 +24,8 @@ namespace Rechner
         /// <param name="Operator">Operator Symbol ("+-*/")</param>
         public void Berechne(double Nummer, double Nummer2, string operation)
         {
+            this.Operation = operation;
+
             switch (operation)
             {
                 case "+":
