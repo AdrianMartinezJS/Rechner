@@ -18,7 +18,8 @@ namespace Rechner
             double zweiterZahlAlsInt = Convert.ToDouble(zweiterZahlAlsString);
 
             // Berechnung ausführen
-            double result = Berechnung(ersterZahlAlsInt, zweiterZahlAlsInt, operation);
+            RechnerModel model = new RechnerModel();
+            double result = model.Berechne(ersterZahlAlsInt, zweiterZahlAlsInt, operation);
 
             // Ausgabe der Summe in der Console
             GibResultatAus(result, operation);
@@ -54,88 +55,6 @@ namespace Rechner
                     Console.WriteLine("Es ist etwas schief gelaufen..");
                     break;
             }
-        }
-
-        ///// <summary>
-        ///// Macht die Operation
-        ///// </summary>
-        ///// <param name="Nummer">Erster zahl vom User eingegeben</param>
-        ///// <param name="Nummer2">Zweiter zahl vom User eingegeben</param>
-        ///// <param name="Operator">Operator Symbol ("+-*/")</param>
-        static double Berechnung(double Nummer, double Nummer2, string operation)
-        {
-            double resultat = 0;
-            switch (operation)
-            {
-                case "+":
-                    resultat = Addiere(Nummer, Nummer2);
-                    break;
-
-                case "-":
-                    resultat = Subtrahiere(Nummer, Nummer2);
-                    break;
-
-                case "*":
-                    resultat = Multipliziere(Nummer, Nummer2);
-                    break;
-
-                case "/":
-                    resultat = Dividiere(Nummer, Nummer2);
-                    break;
-            }
-            return resultat;
-        }
-
-        /// <summary>
-        /// Subtrahiert 2 vorgegebene Zahlen
-        /// </summary>
-        /// <param name="Nummer">Erster Zahl vom User</param>
-        /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
-        static double Subtrahiere(double Nummer, double Nummer2)
-        {
-            double sub = Nummer - Nummer2;
-
-            return sub;
-        }
-
-        /// <summary>
-        /// Addiert 2 vorgegebene Zahlen
-        /// </summary>
-        /// <param name="Nummer">Erster Zahl vom User</param>
-        /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
-        static double Addiere(double Nummer, double Nummer2)
-        {
-            double add = Nummer + Nummer2;
-
-            return add;
-        }
-
-        /// <summary>
-        /// Multipliziert 2 vorgegebene Zahlen
-        /// </summary>
-        /// <param name="Nummer">Erster Zahl vom User</param>
-        /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
-        static double Multipliziere(double Nummer, double Nummer2)
-        {
-            double mult = Nummer * Nummer2;
-
-            return mult;
-        }
-
-        /// <summary>
-        /// Dividiert 2 vorgegebene Zahlen
-        /// </summary>
-        /// <param name="Nummer">Erster Zahl vom User</param>
-        /// <param name="Nummer2">Zweiter Zahl vom User</param>
-        /// <returns></returns>
-        static double Dividiere(double Nummer, double Nummer2)
-        {
-            double div = Nummer / Nummer2;
-
-            return div;
         }
 
         /// <summary>
