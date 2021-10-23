@@ -19,10 +19,10 @@ namespace Rechner
 
             // Berechnung ausführen
             RechnerModel model = new RechnerModel();
-            double result = model.Berechne(ersterZahlAlsInt, zweiterZahlAlsInt, operation);
+            model.Berechne(ersterZahlAlsInt, zweiterZahlAlsInt, operation);
 
             // Ausgabe der Summe in der Console
-            GibResultatAus(result, operation);
+            GibResultatAus(model.Resultat, operation);
             HolBenutzerEingabe("Drucken Sie eine beliebige Taste um das Programm zu beenden. ");
         }
 

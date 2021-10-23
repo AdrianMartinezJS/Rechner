@@ -8,34 +8,42 @@ namespace Rechner
 {
     class RechnerModel
     {
+        public double Resultat { get; private set; }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public RechnerModel()
+        {
+            Resultat = 0;
+        }
+
         /// <summary>
         /// Macht die Operation
         /// </summary>
         /// <param name="Nummer">Erster zahl vom User eingegeben</param>
         /// <param name="Nummer2">Zweiter zahl vom User eingegeben</param>
         /// <param name="Operator">Operator Symbol ("+-*/")</param>
-        public double Berechne(double Nummer, double Nummer2, string operation)
+        public void Berechne(double Nummer, double Nummer2, string operation)
         {
-            double resultat = 0;
             switch (operation)
             {
                 case "+":
-                    resultat = Addiere(Nummer, Nummer2);
+                    Resultat = Addiere(Nummer, Nummer2);
                     break;
 
                 case "-":
-                    resultat = Subtrahiere(Nummer, Nummer2);
+                    Resultat = Subtrahiere(Nummer, Nummer2);
                     break;
 
                 case "*":
-                    resultat = Multipliziere(Nummer, Nummer2);
+                    Resultat = Multipliziere(Nummer, Nummer2);
                     break;
 
                 case "/":
-                    resultat = Dividiere(Nummer, Nummer2);
+                    Resultat = Dividiere(Nummer, Nummer2);
                     break;
             }
-            return resultat;
         }
 
         /// <summary>
