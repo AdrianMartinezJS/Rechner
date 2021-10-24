@@ -16,12 +16,10 @@ namespace Rechner
         public void Ausführen()
         {
             // Hol Zahlen vom User
-            double ersteZahl = view.HoleZahlVomBenutzer();
-            string operation = view.HoleOperatorVomBenutzer();
-            double zweiteZahl = view.HoleZahlVomBenutzer();
+            view.HoleEingabenVomBenutzer();
 
             // Berechnung ausführen
-            model.Berechne(ersteZahl, zweiteZahl, operation);
+            model.Berechne();
 
             // Ausgabe
             view.GibResultatAus();

@@ -5,43 +5,39 @@ namespace Rechner
     class RechnerModel
     {
         public double Resultat { get; private set; }
-        public string Operation { get; private set; }
+        public string Operation { get; set; }
+        public double ErsteZahl { get; set; }
+        public double ZweiteZahl { get; set; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         public RechnerModel()
         {
-            Resultat = 0;
             Operation = "unbekannt";
         }
 
         /// <summary>
         /// Macht die Operation
         /// </summary>
-        /// <param name="Nummer">Erster zahl vom User eingegeben</param>
-        /// <param name="Nummer2">Zweiter zahl vom User eingegeben</param>
-        /// <param name="Operator">Operator Symbol ("+-*/")</param>
-        public void Berechne(double Nummer, double Nummer2, string operation)
+        public void Berechne()
         {
-            this.Operation = operation;
-
-            switch (operation)
+            switch (Operation)
             {
                 case "+":
-                    Resultat = Addiere(Nummer, Nummer2);
+                    Resultat = Addiere(ErsteZahl, ZweiteZahl);
                     break;
 
                 case "-":
-                    Resultat = Subtrahiere(Nummer, Nummer2);
+                    Resultat = Subtrahiere(ErsteZahl, ZweiteZahl);
                     break;
 
                 case "*":
-                    Resultat = Multipliziere(Nummer, Nummer2);
+                    Resultat = Multipliziere(ErsteZahl, ZweiteZahl);
                     break;
 
                 case "/":
-                    Resultat = Dividiere(Nummer, Nummer2);
+                    Resultat = Dividiere(ErsteZahl, ZweiteZahl);
                     break;
             }
         }

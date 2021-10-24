@@ -43,11 +43,18 @@ namespace Rechner
             }
         }
 
+        public void HoleEingabenVomBenutzer()
+        {
+            model.ErsteZahl = HoleZahlVomBenutzer();
+            model.Operation = HoleOperatorVomBenutzer();
+            model.ZweiteZahl = HoleZahlVomBenutzer();
+        }
+
         /// <summary>
         /// Holt die Eingabe (Zahl) vom Benutzer
         /// </summary>
         /// <returns>double</returns>
-        public double HoleZahlVomBenutzer()
+        private double HoleZahlVomBenutzer()
         {
             string zahl;
             Console.WriteLine("Bitte gib eine Zahl für die Berechnung ein: ");
@@ -60,7 +67,7 @@ namespace Rechner
         /// Holt die Eingabe (Operator) vom Benutzer
         /// </summary>
         /// <returns>string</returns>
-        public string HoleOperatorVomBenutzer()
+        private string HoleOperatorVomBenutzer()
         {
             Console.WriteLine("Bitte gib die auszuführende Operation ein( +, -, /, * )");
             return Console.ReadLine();
