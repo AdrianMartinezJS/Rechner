@@ -11,7 +11,10 @@ namespace Rechner
         public ConsoleView(RechnerModel model)
         {
             this.model = model;
+            BenutzerWillBeenden = false;
         }
+
+        public bool BenutzerWillBeenden { get; private set; }
 
         /// <summary>
         /// Gib das Resultat in der Console aus Anhand der Operator und das Resultat
@@ -43,11 +46,32 @@ namespace Rechner
             }
         }
 
-        public void HoleEingabenVomBenutzer()
+        public void HoleEingabenFuerErsteBerechnungVomBenutzer()
         {
             model.ErsteZahl = HoleZahlVomBenutzer();
             model.Operation = HoleOperatorVomBenutzer();
             model.ZweiteZahl = HoleZahlVomBenutzer();
+        }
+
+        public void HoleEingabenFuerFortlaufendeBerechnung()
+        {
+            string eingabe = HoleNächsteAktionVomBenutzer();
+
+            if (eingabe == "Fertig")
+            {
+                BenutzerWillBeenden = true;
+            }
+            else
+            {
+                model.ErsteZahl = model.Resultat;
+                model.ZweiteZahl = Convert.ToDouble(eingabe);
+            }
+        }
+
+        private string HoleNächsteAktionVomBenutzer()
+        {
+            Console.Write("Bitte gib eine weitere Zahl ein (Fertig zum Beenden): ");
+            return Console.ReadLine();
         }
 
         /// <summary>
@@ -71,15 +95,6 @@ namespace Rechner
         {
             Console.WriteLine("Bitte gib die auszuführende Operation ein( +, -, /, * )");
             return Console.ReadLine();
-        }
-
-        /// <summary>
-        /// Wartet bis der Benutzer eine Taste drückt, um das Programm zu beenden
-        /// </summary>
-        public void WarteAufEndeDurchBenutzer()
-        {
-            Console.WriteLine("Zum beenden bitte Return drücken!");
-            Console.ReadLine();
         }
     }
 }

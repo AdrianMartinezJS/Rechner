@@ -16,15 +16,30 @@ namespace Rechner
         public void Ausführen()
         {
             // Hol Zahlen vom User
-            view.HoleEingabenVomBenutzer();
+            view.HoleEingabenFuerErsteBerechnungVomBenutzer();
 
             // Berechnung ausführen
             model.Berechne();
 
             // Ausgabe
             view.GibResultatAus();
-            view.WarteAufEndeDurchBenutzer();
 
+            // Hol wieder Zahlen vom User
+            view.HoleEingabenFuerFortlaufendeBerechnung();
+
+            // Wiederhole es solange der Benutzer nicht beenden will
+            while (!view.BenutzerWillBeenden)
+            {
+                // Berechnung ausführen
+                model.Berechne();
+
+                // Ausgabe
+                view.GibResultatAus();
+
+                // Hol wieder Zahlen vom User
+                view.HoleEingabenFuerFortlaufendeBerechnung();
+            }
+            Console.ReadLine();
         }
     }
 }
