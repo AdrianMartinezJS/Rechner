@@ -1,12 +1,22 @@
 	User Stories für Taschenrechner
 
+	Titel: Validiere der Eingabe
+	Story: Als Benutzer möchte ich sofort erkennen ob meine Eingabe gültig ist, um den Tschenrechner schnell und einfach bedienen zu können
+	Akzeptanzkriterien:
+		* Eine fehlerhafte Eingabe wird nach dem bestätigen von Return angezeigt
+		* Der Benutzer bekommt Hinweise wie er Zahlen, Operationen und Kommandos richtig eingeben kann
+	Status:
+		* Offen
+
 	Titel: Beenden
 	Story: Als Entwickler möchte Ich "Fertig" anstelle einer weiteren Zahl eingeben, um den Taschenrechner zu beenden
 	Akzeptanzkriterien:
 		* Taschenrechner wird beendet, sobald "Fertig" (In dieser Schreibweise) eingegeben wird.
 		* Es gibt einen entsprechenden Hinweis, dass der Benutzer weiß mit welchen Kommando er den Taschenrechner beenden kann
 	Status:
-		* Offen
+		* Implementiert
+		* getestet
+		* Erledigt
 
 	Titel: Fortlaufende Berechnung
 	Story: Als Benutzer möchte Ich eine weitere Zahl eingeben, um die vorherige Operation nochmals auszuführen mit den vorherigen Resultat
@@ -14,23 +24,28 @@
 		* Gleitkommazahlen zwischen -10.0 und 100.0 können eingegeben werden
 		* Die Operation aus der vorherigen Berechnung wird noch mals verwendet
 		* Das neue Resultat wird ausgegeben ohne weitere Interaktion des Benutzers
+	Status:
+		* Implementiert
+		* getestet
+		* Erledigt
 
 	Titel: ObjektOrientierung
 	Story: Als Entwickler möchte ich die Anwendung objektorientiert entwickeln, um später weitere Funktionalitäten hinzufügen zu können
 	Akzeptanzkriterien:
 		* Die Aufteilung der Funktionalitäten auf Klassen folgt dem Prinzip Separation of Concerns (SoC)
-		* Bei der ERstellung von Klassen und Methoden wird das Prinzip Don't Repeat Youserlf (DRY) eingehalten
+		* Bei der Erstellung von Klassen und Methoden wird das Prinzip Don't Repeat Youserlf (DRY) eingehalten
 	Hinweis: 
 		* Diese Story ist eine Erweiterung zu Story "Softwarestruktur"
 	Status:
-		* Offen
+		* Implementiert
+		* Erledigt
 
 	Titel: Softwarestruktur
 	Story: Als Entwickler möchte ich den Quellcode sauber strulturieren, um später einfach Funktionalitäten hinzufügen zu können
 	Akzeptanzkriterien:
 		* Das Single Level of Abstraction Prinzip wird eingehalten, oder eine Abweichung ist begründet und dokumentiert
 	Status:
-		* Umgesetzt
+		* Implementiert
 		* Erledigt
 
 	Titel: Addieren

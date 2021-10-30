@@ -80,11 +80,25 @@ namespace Rechner
         /// <returns>double</returns>
         private double HoleZahlVomBenutzer()
         {
-            string zahl;
+            string eingabe;
+            double zahl;
             Console.WriteLine("Bitte gib eine Zahl für die Berechnung ein: ");
-            zahl = Console.ReadLine();
+            eingabe = Console.ReadLine();
 
-            return Convert.ToDouble(zahl);
+            while (!Double.TryParse(eingabe, out zahl))
+            {
+                Console.WriteLine("Du muss eine gültige GleitkommaZahl eingeben!");
+                Console.WriteLine("Neben den Ziffern 0-9 sind lediglich die folgenden Sonderzeichen erlaubt: ,.-");
+                Console.WriteLine("Dabei muss das - als erstes Zeichen vor einer Ziffer gesetzt werden");
+                Console.WriteLine("Der . fungiert als Trennzeichen an Tausenderstellen");
+                Console.WriteLine("Das , ist das Trennzeichen für die Nachkommastellen");
+                Console.WriteLine("Alle drei Sonderzeichen sind optional!");
+                Console.WriteLine();
+                Console.WriteLine("Bitte gib erneut eine Zahl für die Berechnung ein: ");
+                eingabe = Console.ReadLine();
+            }
+
+            return zahl;
         }
 
         /// <summary>

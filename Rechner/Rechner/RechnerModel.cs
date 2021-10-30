@@ -2,7 +2,7 @@
 
 namespace Rechner
 {
-    class RechnerModel
+    public class RechnerModel
     {
         public double Resultat { get; private set; }
         public string Operation { get; set; }
