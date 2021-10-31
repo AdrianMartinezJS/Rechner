@@ -57,7 +57,7 @@ namespace Rechner
         {
             string eingabe = HoleNächsteAktionVomBenutzer();
 
-            if (eingabe == "Fertig")
+            if (eingabe.ToUpper() == "FERTIG")
             {
                 BenutzerWillBeenden = true;
             }
